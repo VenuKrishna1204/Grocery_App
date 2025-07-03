@@ -12,9 +12,9 @@
 
 **🗂️ Project Structure**
 
-![image](https://github.com/user-attachments/assets/7b39ba95-740f-4134-b73a-6eb31d4498ab)
+ ![image](https://github.com/user-attachments/assets/7b39ba95-740f-4134-b73a-6eb31d4498ab)
 
-![image](https://github.com/user-attachments/assets/fb875640-4e8f-4a91-9604-bf4315103aba)
+![image](https://github.com/user-attachments/assets/8060a547-fde9-4979-8c19-7d041bac5761)
 
 **Step-by-step structured explanation of your grocery Django project files and their purpose (without code) for clear understanding and revision:**
 
