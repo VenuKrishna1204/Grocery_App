@@ -1,0 +1,12 @@
+{% extends 'store/base.html' %}
+{% block content %}
+<style>
+    .success-container { text-align: center; color: green; }
+</style>
+
+<div class="container success-container">
+    <h2>Payment Successful</h2>
+    <p>Your payment has been completed successfully.</p>
+    <p>Remaining Balance: ₹{{ balance }}</p>
+</div>
+{% endblock %}

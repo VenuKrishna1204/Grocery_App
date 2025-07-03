@@ -1,0 +1,20 @@
+{% extends 'store/base.html' %}
+{% block content %}
+<style>
+    .payment-container { text-align: center; }
+    .payment-container button {
+        background: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius:5px; cursor: pointer;
+    }
+    .payment-container button:hover { background: #45a049; }
+</style>
+
+<div class="container payment-container">
+    <h2>Payment</h2>
+    <p>Your Balance: ₹{{ balance }}</p>
+    <p>Total Amount: ₹{{ total }}</p>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Pay Now</button>
+    </form>
+</div>
+{% endblock %}

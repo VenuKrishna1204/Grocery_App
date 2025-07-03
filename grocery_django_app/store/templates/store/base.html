@@ -1,0 +1,38 @@
+<!-- store/templates/store/base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Venu Mart Grocery App</title>
+    <style>
+        body { font-family: Arial; margin:0; background:#f0fff0; }
+        header { background:#4CAF50; color:white; text-align:center; padding:20px; }
+        header h1 { margin:0; }
+        .nav-container { display: flex; justify-content: center; gap: 20px; margin: 20px 0; }
+        .nav-box { background:rgb(196, 196, 41); color:#0d100d; padding:50px 60px; border-radius:10px; text-decoration:none; font-weight:bold; }
+        .nav-box:hover { background:#4CAF50; color:white; }
+        .container { max-width: 1000px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+        footer { background: #4CAF50; color:white; text-align:center; padding:10px; margin-top:40px; }
+    </style>
+</head>
+<body>
+
+{% if user.is_authenticated %}
+<header>
+    <h1><b>Venu Mart (Grocery App)</b></h1>
+    <p>Your daily destination for fresh vegetables and fruits at best prices.</p>
+</header>
+
+<div class="nav-container">
+    <a class="nav-box" href="{% url 'grocery_home' %}">Home</a>
+    <a class="nav-box" href="{% url 'vegetables' %}">Vegetables</a>
+    <a class="nav-box" href="{% url 'fruits' %}">Fruits</a>
+    <a class="nav-box" href="{% url 'cart' %}">Cart</a>
+    <a class="nav-box" href="{% url 'logout' %}">Logout</a>
+</div>
+{% endif %}
+
+{% block content %}{% endblock %}
+
+<footer>&copy; 2025 Venu Mart Grocery App</footer>
+</body>
+</html>

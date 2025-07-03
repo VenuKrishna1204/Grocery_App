@@ -1,0 +1,12 @@
+{% extends 'store/base.html' %}
+{% block content %}
+<style>
+    .failure-container { text-align: center; color: red; }
+</style>
+
+<div class="container failure-container">
+    <h2>Payment Failed</h2>
+    <p>Insufficient funds to complete your payment.</p>
+    <p>Your Balance: ₹{{ balance }}</p>
+</div>
+{% endblock %}

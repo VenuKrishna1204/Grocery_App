@@ -1,0 +1,47 @@
+<!-- store/templates/store/login.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Venu Mart</title>
+    <style>
+        body { font-family: Arial; background: #e8f5e9; }
+        .login-container { max-width:500px; margin:20px auto; background:white; padding:10px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.2); text-align:center; }
+        .login-container h2 { color: #4CAF50; }
+        .login-container input { width:50%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px; }
+        .login-container button { background:#4CAF50; color:white; padding:10px 30px; border:none; border-radius:5px; cursor:pointer; }
+        .login-container button:hover { background:#45a049; }
+         .l { background: #66ac67; text-align: center; padding: 1px;}
+    .l h2 {
+        margin-bottom: 5px;
+        color: rgb(245, 240, 240);
+        font-size: 300%;
+    }
+
+    .l p {
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+<div class="l">
+    <h2>VENU MART</h2>
+    <p>Please login with your credentials to continue.</p>
+</div>
+<div class="login-container">
+    <p><b style="color: red; font-size: 150%;">LOGIN</b></p>
+    <form method="POST">
+        {% csrf_token %}
+        <b>Username: </b><input type="text" name="username" placeholder="Username" required><br>
+       <b> Password: </b><input type="password" name="password" placeholder="Password" required><br>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<div style="background: #e8f5e9; border-left: 5px solid #4CAF50; padding: 15px; margin: 20px auto; max-width: 650px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center;">
+  <h3 style="color: #4CAF50; margin-bottom: 10px;">Welcome to Venu Grocery App</h3>
+  <p style="color: #333;">Please login to access your personalized grocery shopping experience. Enjoy fresh vegetables and fruits every day!</p>
+</div>
+
+
+</body>
+</html>
